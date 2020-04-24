@@ -40,3 +40,9 @@ use: {
             }]]
         }
     }
+
+server 层实现热更新
+
+1.webpack-dev-middleware  // 只是服务器编译打包更新了，
+2.webpack-hot-middleware +  react-hot-loader 前者更新了不知道如何更新页面需要搭配后者， 后者在react16.6+版本会失效
+webpackHotMiddleware 需要在入口如配置语句连接服务器， 保持长连接
